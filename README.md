@@ -92,3 +92,49 @@ Use any or all of the following methods to optimize your model:
 4. Design a neural network model, and be sure to adjust for modifications that will optimize the model to achieve higher than 75% accuracy.
 
 5. Save and export your results to an HDF5 file. Name the file `AlphabetSoupCharity_Optimization.h5`.
+
+### Step 4: Write a Report on the Neural Network Model
+For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for Alphabet Soup.
+
+The report should contain the following:
+
+1. **Overview**: Explain the purpose of this analysis.
+
+2. **Results**: Using bulleted lists and images to support your answers, address the following questions:
+
+    - Data Preprocessing
+        - What variable(s) are the target(s) for your model?
+        - What variable(s) are the features for your model?
+        - What variable(s) should be removed from the input data because they are neither targets nor features?
+
+    - Compiling, Training, and Evaluating the Model
+        - How many neurons, layers, and activation functions did you select for your neural network model, and why?
+        - Were you able to achieve the target model performance?
+        - What steps did you take in your attempts to increase model performance?
+
+3. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+
+## Report
+### Overview
+The purpose of this analysis was to create a binary classifier that can help Alphabet Soup predict which applicants will be successful in their ventures if funded by Alphabet Soup. This analysis utilized past organizations that have received funding from Alphabet Soup over the years, with a number of features and determination of whether the funding was used effectively.
+
+### Results
+#### Data Preprocessing
+1. *What variable(s) are the target(s) for your model?* 'IS_SUCCESSFUL'
+
+2. *What variable(s) are the features for your model?* 'APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS', 'ASK_AMT'
+
+3. *What variable(s) should be removed from the input data because they are neither targets nor features?* 'EIN', 'NAME'
+
+#### Compiling, Training, and Evaluating the Model
+1. *How many neurons, layers, and activation functions did you select for your neural network model, and why?* 
+
+2. *Were you able to achieve the target model performance?*
+
+3. *What steps did you take in your attempts to increase model performance?* 
+    - Re-binned "Other" categories for 'APPLICATION_TYPE' and 'CLASSIFICATION' features.
+    - Added additional hidden layer.
+    - Increased number of neurons in both hidden layers.
+
+### Summary
+Given that this is ultimately a classification problem, perhaps a different logistical model could have performed better than this deep learning model.
