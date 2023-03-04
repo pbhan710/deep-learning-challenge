@@ -127,14 +127,19 @@ The purpose of this analysis was to create a binary classifier that can help Alp
 3. *What variable(s) should be removed from the input data because they are neither targets nor features?* 'EIN', 'NAME'
 
 #### Compiling, Training, and Evaluating the Model
-1. *How many neurons, layers, and activation functions did you select for your neural network model, and why?* 
+1. *How many neurons, layers, and activation functions did you select for your neural network model, and why?*
 
-2. *Were you able to achieve the target model performance?*
+I started with one inner, two hidden, and one output layers. The inner and hidden layers utilize 2 neurons and the Relu activation function. These choices were initially made for simplicity, to later add to the model if needed.
+
+The outer layer for my neural network model utilizes 1 neuron and the Sigmoid activation function due to the nature of the prediction the model is attempting to make, namely a logistical prediction (i.e., whether applicants will be successful or not).
+
+2. *Were you able to achieve the target model performance?* No. The models's accuracy was 72.37%, short of the 75% accuracy target. The "optimized" model's accuracy only went up to 72.96%.
 
 3. *What steps did you take in your attempts to increase model performance?* 
     - Re-binned "Other" categories for 'APPLICATION_TYPE' and 'CLASSIFICATION' features.
     - Added additional hidden layer.
-    - Increased number of neurons in both hidden layers.
+    - Increased number of neurons in hidden layers.
+    - Increased number of epochs.
 
 ### Summary
-Given that this is ultimately a classification problem, perhaps a different logistical model could have performed better than this deep learning model.
+Given that this is ultimately a classification problem, perhaps a different, less complex logistical model than a neural network model could have performed better. I would have given a Random Forest model or even a logistical regression model a try.
